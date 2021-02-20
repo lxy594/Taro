@@ -8,7 +8,7 @@ const [useName,setUsename]=useState('lxy.vcom')
 return(
   <View>
   <Text>{useName}</Text>
-  <Child></Child>
+  <Child userchild={useName}></Child>
   </View>
 )
 }
