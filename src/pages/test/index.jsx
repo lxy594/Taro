@@ -4,8 +4,9 @@ import React, { useState } from 'react'
 
 function Test() {
     const [transfer, setTransfer] = useState('lxysss')
+    const [trans, setTrans] = useState('trans.more.number')
     const gotoIndex = () => {
-        Taro.navigateTo({ url: '/pages/index/index?transfer=' + transfer })
+        Taro.navigateTo({ url: '/pages/index/index?transfer=' + transfer + '&trans='+trans })
     }
     return (
         <View>
