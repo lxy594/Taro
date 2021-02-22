@@ -1,8 +1,8 @@
 {
-  "name": "Demo",
+  "name": "demo2",
   "version": "1.0.0",
   "private": true,
-  "description": "testDemo",
+  "description": "demno2",
   "templateInfo": {
     "name": "default",
     "typescript": false,

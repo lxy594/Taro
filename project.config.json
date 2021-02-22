@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "Demo",
-  "description": "testDemo",
+  "projectname": "demo2",
+  "description": "demno2",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
