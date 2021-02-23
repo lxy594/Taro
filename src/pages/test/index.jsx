@@ -1,6 +1,9 @@
 import Taro from '@tarojs/taro'
 import { View, Text, Button } from '@tarojs/components'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+//资源引入
+import {imhone,imgtwo} from '../../toolsimg'
 
 function Test() {
     const [transfer, setTransfer] = useState('lxysss')
@@ -8,6 +11,11 @@ function Test() {
     const gotoIndex = () => {
         Taro.navigateTo({ url: '/pages/index/index?transfer=' + transfer + '&trans='+trans })
     }
+
+    useEffect(()=>{
+        imgtwo()
+        imhone()
+    },[])
     return (
         <View>
             <Text>
