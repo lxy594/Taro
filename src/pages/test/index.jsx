@@ -1,21 +1,22 @@
 import Taro from '@tarojs/taro'
-import { View, Text, Button,Image } from '@tarojs/components'
+import { View, Text, Button, Image } from '@tarojs/components'
 import React, { useEffect, useState } from 'react'
 import images from '../../accect/tox.jpg'
-//资源引入
-import {imhone,imgtwo} from '../../toolsimg'
+
 
 function Test() {
     const [transfer, setTransfer] = useState('lxysss')
     const [trans, setTrans] = useState('trans.more.number')
     const gotoIndex = () => {
-        Taro.navigateTo({ url: '/pages/index/index?transfer=' + transfer + '&trans='+trans })
+        Taro.navigateTo({ url: '/pages/index/index?transfer=' + transfer + '&trans=' + trans })
     }
 
-    useEffect(()=>{
-        imgtwo()
-        imhone()
-    },[])
+    const contest = [
+        { id: 1, name: '小红' },
+        { id: 2, name: '小屁' },
+        { id: 3, name: '小路' },
+        { id: 4, name: '小晓' }
+    ]
     return (
         <View>
             <Text>
@@ -26,7 +27,15 @@ function Test() {
                 <Image src={images} style='width:100px height:200px' lazyLoad='false' />
                 <Image src={require('../../accect/12.png')} style='margin-left:10px'></Image>
                 <Image src='https://cdn.pixabay.com/photo/2021/01/24/20/21/cloud-5946381__340.jpg'></Image>
-                </View>
+            </View>
+
+            {
+                contest.map((item)=>{
+                  return(
+                    <View key={item.id}>{item.id}:{item.name}</View>
+                  )
+                })
+            }
         </View>
     )
 }
