@@ -17,6 +17,8 @@ function Test() {
         { id: 3, name: '小路' },
         { id: 4, name: '小晓' }
     ]
+
+    const logical = 1;
     return (
         <View>
             <Text>
@@ -30,12 +32,15 @@ function Test() {
             </View>
 
             {
-                contest.map((item)=>{
-                  return(
-                    <View key={item.id}>{item.id}:{item.name}</View>
-                  )
+                contest.map((item) => {
+                    return (
+                        <View key={item.id}>{item.id}:{item.name}</View>
+                    )
                 })
             }
+            {/* 逻辑判断 */}
+            <View>三元表达式的逻辑判断：{logical === 1 ? '晓刘' : '小红'}</View>
+            <View>短路运算: {logical === 1 && '小赚' || '小力'}</View>
         </View>
     )
 }
